@@ -20,14 +20,3 @@
     "vite": "^4.4.5"
   }
 }
-```
-### Also, check one small thing in your `main.jsx`:
-For this to work on Vercel, the very last line of your `main.jsx` needs to tell React where to "attach" itself to the HTML. Make sure the bottom of your **`main.jsx`** looks like this:
-
-```javascript
-// ... existing code ...
-
-import { createRoot } from 'react-dom/client';
-const container = document.getElementById('root');
-const root = createRoot(container);
-root.render(<App />);
